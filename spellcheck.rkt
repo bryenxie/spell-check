@@ -2,7 +2,6 @@
 
 (provide spellcheck?)
 
-;; spellcheck.rkt - by Dave Tompkins for CS 135 Fall 2017
 
 ;; This module provides the function spellcheck? to determine if a
 ;; lowercase word is spelled correctly.
@@ -10,7 +9,6 @@
 ;; The wordlist contains 39,302 words and is a modified version 
 ;; of a list generated at: http://app.aspell.net/create
 
-;; It is stored in a Trie (very similar to A07)
 ;; except that a list is used to make the (very large) Trie more compact
 
 

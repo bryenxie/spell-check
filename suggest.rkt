@@ -1,34 +1,10 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-intermediate-lambda-reader.ss" "lang")((modname suggest) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
-;; OPTIONAL -- spellcheck.rkt provides the following function:
-;;
-;; (spellcheck? s) determines if s is spelled correctly
-;;   (according to a medium-sized wordlist)
-;; spellcheck: Str -> Bool
-;;
-;; You may use this function for your own experiments
-;; (and to show off your program to your friends & family)
-
-;; Do NOT leave this require in your file when you submit your code.
-;; (require "spellcheck.rkt")
-;; [this file will be available after the A07 deadline]
-;; NOTE: You do not need to open spellcheck.rkt in DrRacket to use it
-;;       (opening the file in DrRacket may slow down your computer).
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require "spellcheck.rkt")
 
-;; Place your identifying information here
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; NOTE: you should complete the documentation & tests (design recipe)
-;; for all functions (except remove-at and remove-letters)
-;; But remember, because most of your functions will not have a cond
-;; or much logic, exhaustive tests may not be required
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 
@@ -38,7 +14,6 @@
 
 (define letters (string->list "abcdefghijklmnopqrstuvwxyz"))
 
-;; 4a ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;(remove-dups slst) remove all the duplicates elements in slst
 ;; remove-dups: (listof Word) -> (listof Word)
@@ -57,7 +32,6 @@
 (check-expect (remove-dups empty) empty)
 (check-expect (remove-dups (list 1 2 3)) (list 1 2 3))
 
-;; 4b ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;(ifoldr combine base lst) a foldr that can track the index
 ;; ifoldr: (Nat X Y -> Y) Y (listof X) -> Y
@@ -113,7 +87,6 @@
 ;;test
 (check-expect (remove-letters "java") '("ava" "jva" "jaa" "jav"))
 
-;; 4c ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;-------------------insert-------------------------------
 
 ;;(insert-letters s) produce a list that contains every possible letter (a..z)
